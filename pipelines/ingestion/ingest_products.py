@@ -36,7 +36,7 @@ def save_raw_data(data):
         return
     
     try:
-        folder = Path('data/raw')
+        folder = Path('data/bronze')
 
         folder.mkdir(parents = True, exist_ok = True)
 
@@ -53,7 +53,7 @@ def save_raw_data(data):
         logging.error(f'Error saving data: {e}')
 
 
-URL_API = 'https://fakestoreapi.com/products'
+URL_API = 'https://dummyjson.com/products'
 products = fetch_produts_from_api(URL_API)
 
 if products:
